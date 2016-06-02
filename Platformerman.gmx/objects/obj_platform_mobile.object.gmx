@@ -69,16 +69,17 @@ if ( place_meeting( x + hsp, y, obj_wall ) )
 }
 x += hsp; 
 
-//Vertical Collision
-if ( place_meeting( x, y + vsp, obj_wall ) ) 
+//Platform Collision
+if( place_meeting( x, y, obj_player ) ) 
 {
-    while( ! place_meeting( x, y + sign( vsp ) , obj_wall ) ) 
-    {
-        y += sign( vsp ); 
+    if( obj_player.y &gt; y - 6 ){
+        with( obj_player ){
+            hsp = 0; 
+            vsp = 0; 
+            dir = 0;
+        }
     }
-    vsp = 0; 
 }
-y += vsp; 
 
 </string>
           </argument>

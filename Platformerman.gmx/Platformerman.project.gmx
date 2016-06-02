@@ -23,6 +23,7 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_platform_stationary</object>
     <object>objects\obj_platform_mobile</object>
+    <object>objects\obj_enemy_nofall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

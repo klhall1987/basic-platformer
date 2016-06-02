@@ -5,42 +5,24 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>604</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Initialize Variables
-
-dir = -1;
-movespeed = 3; 
-grav = 0.2; 
-hsp = 0;
-vsp = 0; 
-fearofheights = 0; 
-
-
-</string>
-          </argument>
-        </arguments>
       </action>
-    </event>
-    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -57,50 +39,7 @@ fearofheights = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hsp = dir * movespeed;
-vsp += grav; 
-
-//Horizontal Collision
-if ( place_meeting( x + hsp, y, obj_wall ) ) 
-{
-    while( ! place_meeting( x + sign( hsp ), y, obj_wall ) ) 
-    {
-        x += sign( hsp ); 
-    }
-    hsp = 0; 
-    
-    dir *= -1; 
-}
-x += hsp; 
-
-//Vertical Collision
-if ( place_meeting( x, y + vsp, obj_wall ) ) 
-{
-    while( ! place_meeting( x, y + sign( vsp ) , obj_wall ) ) 
-    {
-        y += sign( vsp ); 
-    }
-    vsp = 0; 
-    
-    if( fearofheights ) &amp;&amp; ! position_meeting( x + ( sprite_width / 2 ) * dir, y + ( sprite_height / 2 ) + 8, obj_wall )
-    {
-        dir *= -1;    
-    }
-}
-y += vsp; 
-
-//Enemy Collision
-if ( place_meeting( x, y, obj_player ) )
-{
-    if ( obj_player.y &lt; y-16 )
-    {
-        with ( obj_player ) vsp = -jumpspeed;
-       instance_destroy();       
-    } else {
-        game_restart();
-    }
-}
-
+            <string>fearofheights = 1; 
 </string>
           </argument>
         </arguments>
