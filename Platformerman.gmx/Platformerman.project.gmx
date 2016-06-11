@@ -13,9 +13,13 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_platform_stationary</sprite>
     <sprite>sprites\spr_platform_mobile</sprite>
+    <sprite>sprites\spr_portal</sprite>
+    <sprite>sprites\spr_save</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <objects name="objects">
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
@@ -24,9 +28,12 @@
     <object>objects\obj_platform_stationary</object>
     <object>objects\obj_platform_mobile</object>
     <object>objects\obj_enemy_nofall</object>
+    <object>objects\obj_portal</object>
+    <object>objects\obj_checkpoint</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
