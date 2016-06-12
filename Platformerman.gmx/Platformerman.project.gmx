@@ -15,7 +15,6 @@
     <sprite>sprites\spr_platform_mobile</sprite>
     <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_save</sprite>
-    <sprite>sprites\sprite9</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">

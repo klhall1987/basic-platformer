@@ -29,6 +29,7 @@
 
 grav = 0.2; 
 hsp = 0; 
+hsp_carry = 0; 
 vsp = 0; 
 movespeed = 4; 
 
@@ -106,16 +107,20 @@ if ( place_meeting( x, y + 1, obj_wall ) )
    if ( key_jump ) vsp = -jumpspeed; 
 }
 
+var hsp_final = hsp + hsp_carry;
+hsp_carry = 0; 
+
 //Horizontal Collision
-if ( place_meeting( x + hsp, y, obj_wall ) ) 
+if ( place_meeting( x + hsp_final, y, obj_wall ) ) 
 {
-    while( ! place_meeting( x + sign( hsp ), y, obj_wall ) ) 
+    while( ! place_meeting( x + sign( hsp_final ), y, obj_wall ) ) 
     {
-        x += sign( hsp ); 
+        x += sign( hsp_final ); 
     }
+    hsp_final = 0; 
     hsp = 0; 
 }
-x += hsp; 
+x += hsp_final; 
 
 //Vertical Collision
 if ( place_meeting( x, y + vsp, obj_wall ) ) 
