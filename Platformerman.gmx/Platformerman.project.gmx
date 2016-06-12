@@ -12,7 +12,8 @@
     <sprite>sprites\spr_powerup</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_platform_stationary</sprite>
-    <sprite>sprites\spr_platform_mobile</sprite>
+    <sprite>sprites\spr_mobile_platform_horizontal</sprite>
+    <sprite>sprites\spr_mobile_platform_vertical</sprite>
     <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_save</sprite>
   </sprites>
@@ -29,7 +30,8 @@
     <object>objects\obj_powerup</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_platform_stationary</object>
-    <object>objects\obj_platform_mobile</object>
+    <object>objects\obj_mobile_platform_horizontal</object>
+    <object>objects\obj_mobile_platform_vertical</object>
     <object>objects\obj_enemy_nofall</object>
     <object>objects\obj_portal</object>
     <object>objects\obj_checkpoint</object>

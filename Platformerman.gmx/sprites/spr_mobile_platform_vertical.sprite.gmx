@@ -20,6 +20,6 @@
   <width>32</width>
   <height>12</height>
   <frames>
-    <frame index="0">images\spr_platform_mobile_0.png</frame>
+    <frame index="0">images\spr_mobile_platform_vertical_0.png</frame>
   </frames>
 </sprite>
