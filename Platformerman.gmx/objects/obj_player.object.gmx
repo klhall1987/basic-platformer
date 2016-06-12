@@ -42,6 +42,8 @@ if ( global.checkpointR == room )
     x = global.checkpointx; 
     y = global.checkpointy;
 }
+
+key_down = 0; 
 </string>
           </argument>
         </arguments>
@@ -92,6 +94,7 @@ sprite_index = spr_player;
 key_right = keyboard_check( ord( 'D' ) );
 key_left = -keyboard_check( ord( 'A' ) );
 key_jump = keyboard_check_pressed( vk_space );
+key_down = keyboard_check( ord( 'S' ) );
 
 //React to inputs
 move = key_left + key_right; 
@@ -100,7 +103,7 @@ if ( vsp  &lt; 10 ) vsp += grav;
 
 if ( place_meeting( x, y + 1, obj_wall ) ) 
 {
-    vsp = key_jump * -jumpspeed; 
+   if ( key_jump ) vsp = -jumpspeed; 
 }
 
 //Horizontal Collision
