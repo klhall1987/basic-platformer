@@ -400,7 +400,7 @@
     <instance objName="obj_platform_stationary" x="124" y="512" name="inst_FA2A252D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform_stationary" x="140" y="512" name="inst_6CB5EE84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mobile_platform_horizontal" x="140" y="592" name="inst_02417D23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mobile_platform_vertical" x="489" y="624" name="inst_DA97B8AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mobile_platform_vertical" x="477" y="512" name="inst_BC1DF762" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

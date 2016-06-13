@@ -28,8 +28,7 @@
             <string>///Initialize Variables
 
 dir = -1;
-movespeed = 3;
-grav = 0.2; 
+grav = 1;
 vsp = 0;
 sprite_index = -1;
 
@@ -56,8 +55,8 @@ sprite_index = -1;
           <argument>
             <kind>1</kind>
             <string>mask_index = obj_mobile_platform_vertical; 
-vsp = dir * movespeed 
 
+vsp = dir * grav;
 
 //Vertical Collision
 if ( place_meeting( x, y + vsp, obj_wall ) ) 
@@ -66,20 +65,21 @@ if ( place_meeting( x, y + vsp, obj_wall ) )
     {
         y += sign( vsp ); 
     }
-    vsp = 0; 
+    vsp = 0;
     
-    dir *= -1; 
-    
+    dir *= -1;  
+
 }
 y += vsp; 
 
+
 if ( instance_exists( obj_player ) )
 {
-    if ( round( obj_player.y + ( obj_player.sprite_height/2 ) ) &gt; y ) || ( obj_player.key_down ) mask_index = -1; 
+    if ( round( obj_player.y + ( obj_player.sprite_height/2 ) ) &gt; y ) || (obj_player.key_down) mask_index = -1; 
     else 
     {
         mask_index = obj_mobile_platform_vertical; 
-        if ( place_meeting( x, y-1, obj_player ) )
+        if ( place_meeting( x, y+1, obj_player ) )
         {
             obj_player.vsp_carry = vsp;    
         }
